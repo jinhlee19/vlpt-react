@@ -1,5 +1,6 @@
 import './App.css';
-import Section334 from './components/Section334';
+import Section337 from './components/Section334';
+import Section341 from './components/Section341';
 
 function App() {
 	const name = '리액트';
@@ -17,7 +18,8 @@ function App() {
 		<>
 			{name === '리액트' && <h1 style={style}>{name} 안녕</h1>}
 			<h2>{name1 || '리액트'}</h2>
-			<Section334 />
+			<Section337 favoriteNumber={1} />
+			<Section341 />
 		</>
 	);
 }
