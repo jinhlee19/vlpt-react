@@ -22,12 +22,18 @@ class Section341 extends Component {
 				<button
 					className="btn-base"
 					onClick={() => {
-						this.setState(prevState => {
-							return { number: prevState.number + 1 };
+						// setState가 끝난 후 특정작업 실행하기 (setState에 두번째 콜백 함수를 등록)
+						this.setState({ number: number + 1 }, () => {
+							console.log('방금 setState가 호출되었습니다.');
 						});
-						this.setState(prevState => {
-							return { number: prevState.number + 1 };
-						});
+						this.setState(
+							prevState => {
+								return { number: prevState.number + 1 };
+							},
+							() => {
+								console.log('다음 setState가 호출되었습니다.');
+							}
+						);
 					}}
 				>
 					+
