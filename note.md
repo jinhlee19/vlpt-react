@@ -32,3 +32,40 @@ const [three, four] = array2;
 console.log(array1);
 console.log(array2);
 ```
+
+### 4.2.2.1. onChange 이벤트 설정\*
+
+- e객체는 syntheticEvent로 웹브라우저의 네이티브 이벤트를 감싸는 객체
+- jsx에서도 이런 네이티브와 동일하게 적용하면 되고, 이벤트가 끝나면 이벤트가 초기화되므로 정보를 참조할 수 없다.
+- 비동기적으로 이벤트 객체를 참조할 일이 있다면 e.persist()함수를 호출해야한다.
+- 이때는 onChange이벤트가 발생할 때, 앞으로 변할 인풋값인 e.target.value로 기록한다.
+
+```jsx
+import React from 'react';
+
+const Section421 = () => {
+	return (
+		<div>
+			<h1>이벤트연습</h1>
+			{/* <input
+				type="text"
+				name="message"
+				placeholder="아무거나 입력해보세요"
+				onChange={e => {
+					console.log(e);
+				}}
+			/> */}
+			<input
+				type="text"
+				name="message"
+				placeholder="아무거나 입력해보세요"
+				onChange={e => {
+					console.log(e.target.value);
+				}}
+			/>
+		</div>
+	);
+};
+
+export default Section421;
+```
