@@ -1,6 +1,6 @@
 import './App.css';
 import Section337 from './components/Section334';
-import Section341 from './components/Section341';
+import Section342 from './components/Section342';
 
 function App() {
 	const name = '리액트';
@@ -16,10 +16,10 @@ function App() {
 
 	return (
 		<>
+			<Section342 />
 			{name === '리액트' && <h1 style={style}>{name} 다시보기</h1>}
 			<h2>{name1 || '리액트'}</h2>
 			<Section337 favoriteNumber={1} />
-			<Section341 />
 		</>
 	);
 }
