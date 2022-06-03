@@ -1,7 +1,7 @@
 import './App.css';
 import Section337 from './components/Section334';
 import Section342 from './components/Section342';
-import Section4232 from './components/Section4232';
+import Section424 from './components/Section424';
 
 function App() {
 	const name = '리액트';
@@ -22,7 +22,7 @@ function App() {
 			<h2>{name1 || '리액트'}</h2>
 			<Section337 favoriteNumber={1} />
 
-			<Section4232 />
+			<Section424 />
 		</>
 	);
 }

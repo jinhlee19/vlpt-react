@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-class Section4232 extends Component {
+class Section424 extends Component {
 	state = {
 		username: '',
 		message: '',
@@ -44,4 +44,4 @@ class Section4232 extends Component {
 		);
 	}
 }
-export default Section4232;
+export default Section424;

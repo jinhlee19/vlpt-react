@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-class Section4231 extends Component {
+class Section423 extends Component {
 	state = {
 		message: '',
 	};
@@ -37,4 +37,4 @@ class Section4231 extends Component {
 		);
 	}
 }
-export default Section4231;
+export default Section423;
