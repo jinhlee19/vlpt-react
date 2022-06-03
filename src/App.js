@@ -1,8 +1,7 @@
 import './App.css';
 import Section337 from './components/Section334';
 import Section342 from './components/Section342';
-import Section421 from './components/Section421';
-import Section422 from './components/Section422';
+import Section4232 from './components/Section4232';
 
 function App() {
 	const name = '리액트';
@@ -19,11 +18,11 @@ function App() {
 	return (
 		<>
 			<Section342 />
-			{name === '리액트' && <h1 style={style}>{name} 다시보기</h1>}
+			{name === '리액트' && <h1 style={style}>{name} 기초다지기</h1>}
 			<h2>{name1 || '리액트'}</h2>
 			<Section337 favoriteNumber={1} />
-			<Section421 />
-			<Section422 />
+
+			<Section4232 />
 		</>
 	);
 }

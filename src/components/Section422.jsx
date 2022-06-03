@@ -4,6 +4,7 @@ class Section422 extends Component {
 	state = {
 		message: '',
 	};
+
 	render() {
 		return (
 			<div>
