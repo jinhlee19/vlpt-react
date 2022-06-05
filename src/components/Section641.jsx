@@ -9,7 +9,11 @@ const Section641 = () => {
 	]);
 	const [inputText, setInputText] = useState('');
 	const [nextId, setNextId] = useState(5);
-	const namesList = names.map(name => <li key={name.id}>{name.text}</li>);
+	const namesList = names.map(name => (
+		<li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+			{name.text}
+		</li>
+	));
 
 	const onChange = e => setInputText(e.target.value);
 	const onClick = () => {
@@ -21,7 +25,10 @@ const Section641 = () => {
 		setNames(nextNames);
 		setInputText('');
 	};
-
+	const onRemove = id => {
+		const nextNames = names.filter(name => name.id !== id);
+		setNames(nextNames);
+	};
 	return (
 		<>
 			<input type="text" value={inputText} onChange={onChange} />
