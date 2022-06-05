@@ -2,6 +2,7 @@ import './App.css';
 import Section337 from './components/Section334';
 import Section342 from './components/Section342';
 import Section511 from './components/Section511';
+import Section531 from './components/Section531';
 
 function App() {
 	const name = '리액트';
@@ -23,6 +24,8 @@ function App() {
 			<Section337 favoriteNumber={1} />
 
 			<Section511 />
+			<Section531 ref={ref => (this.scrollBox = ref)} />
+			{/* <button onClick={() => this.scrollBox.scrollToBottom()}>맨밑으로</button> */}
 		</>
 	);
 }
