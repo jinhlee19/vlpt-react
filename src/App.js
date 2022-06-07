@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Section337 from './components/Section334';
 import Section342 from './components/Section342';
@@ -6,6 +7,7 @@ import Section621 from './components/Section621';
 import Section641 from './components/Section641';
 import Section822 from './components/Section822';
 import Section731 from './components/Section731';
+
 function App() {
 	const name = '리액트';
 	// const name1 = undefined;
@@ -17,7 +19,7 @@ function App() {
 		fontWeight: 'bold',
 		padding: 16,
 	};
-
+	const [visible, setVisible] = useState(false);
 	return (
 		<>
 			<Section342 />
@@ -29,7 +31,15 @@ function App() {
 			{/* <button onClick={() => this.scrollBox.scrollToBottom()}>맨밑으로</button> */}
 
 			{/* <Section731 /> */}
-			<Section822 />
+			<button
+				onClick={() => {
+					setVisible(!visible);
+				}}
+			>
+				{visible ? '숨기기' : '보이기'}
+			</button>
+			<hr />
+			{visible && <Section822 />}
 		</>
 	);
 }

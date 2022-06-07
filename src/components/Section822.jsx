@@ -4,8 +4,14 @@ const Section822 = () => {
 	const [name, setName] = useState('');
 	const [nickname, setNickname] = useState('');
 	useEffect(() => {
-		console.log('마운팅 때 실행');
-	}, []);
+		console.log('effect');
+		// console.log(name);
+		return () => {
+			// console.log('cleanup');
+			// console.log('name');
+			console.log('unmount');
+		};
+	}, [name]);
 	const onChangeName = e => {
 		setName(e.target.value);
 	};
