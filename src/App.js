@@ -28,7 +28,8 @@ function App() {
 			{/* <Section531 ref={ref => (this.scrollBox = ref)} /> */}
 			{/* <button onClick={() => this.scrollBox.scrollToBottom()}>맨밑으로</button> */}
 
-			<Section731 />
+			{/* <Section731 /> */}
+			<Section822 />
 		</>
 	);
 }

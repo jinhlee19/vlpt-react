@@ -4,9 +4,8 @@ const Section822 = () => {
 	const [name, setName] = useState('');
 	const [nickname, setNickname] = useState('');
 	useEffect(() => {
-		console.log('렌더링 완료');
-		console.log(name, nickname);
-	});
+		console.log('마운팅 때 실행');
+	}, []);
 	const onChangeName = e => {
 		setName(e.target.value);
 	};
