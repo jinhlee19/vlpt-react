@@ -5,11 +5,11 @@ const Section822 = () => {
 	const [nickname, setNickname] = useState('');
 	useEffect(() => {
 		console.log('effect');
-		// console.log(name);
+		console.log(name);
 		return () => {
-			// console.log('cleanup');
-			// console.log('name');
-			console.log('unmount');
+			console.log('cleanup');
+			console.log(name);
+			// console.log('unmount');
 		};
 	}, [name]);
 	const onChangeName = e => {
