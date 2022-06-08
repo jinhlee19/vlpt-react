@@ -8,6 +8,7 @@ import Section641 from './components/Section641';
 import Section822 from './components/Section822';
 import Section731 from './components/Section731';
 import Section831 from './components/Section831';
+import Section832 from './components/Section832';
 
 function App() {
 	const name = '리액트';
@@ -44,6 +45,7 @@ function App() {
 			{visible && <Section822 />} */}
 
 			<Section831 />
+			<Section832 />
 		</>
 	);
 }
